@@ -1,0 +1,17 @@
+receptor = ..\..\MaDA_fixed.pdbqt
+ligand = NCTS.pdbqt
+
+out = MADA_NCTS.pdbqt
+log = MADA_NCTS.txt
+
+center_x = -11.799
+center_y = 24.179
+center_z = -55.784
+
+size_x = 30
+size_y = 36
+size_z = 20
+
+exhaustiveness = 8
+
+num_modes = 32

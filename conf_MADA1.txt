@@ -1,0 +1,17 @@
+receptor = ../../MaDA1_endo_final.pdbqt
+ligand = CTS_01.pdbqt
+
+out = MADA1CTS_01.pdbqt
+log = MADA1CTS_01.pdbqt
+
+center_x = 13.383
+center_y = -5.800
+center_z = 37.491
+
+size_x = 32
+size_y = 24
+size_z = 20
+
+exhaustiveness = 8
+
+num_modes = 32
