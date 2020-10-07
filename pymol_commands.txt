@@ -1,0 +1,88 @@
+Note: Copy/paste the commands that follow “PyMOL>” 
+
+Show sticks of residues within 5 angstroms of your selection:
+PYMOL> show sticks, byres all within 5 of SELECTIONNAME
+
+If you wanted to make the water molecule smaller, type:
+PyMOL>alter active_water, vdw=0.5
+PyMOL>rebuild
+
+Command to create colorblind-friendly images (if you want the background black, change the first line to say “black” instead of “white”): PYMOL>
+bg_color white
+set antialias=1
+set orthoscopic=1
+set gamma=1.15
+set cartoon_fancy_helices, 1
+set cartoon_fancy_sheets, 1
+set_color wred, [0.788,0.000,0.140]
+set_color wblue, [0.31,0.506,0.686]
+set_color wgold, [0.855,0.647,0.125]
+set_color wgreen, [0.134,0.545,0.134]
+set_color wgray, [0.800,0.800,0.800]
+set_color wrose, [0.65,0.47,0.55]
+set_color wpurple, [0.37,0.31,0.62]
+set_color mpurple, [0.75,0.57,0.80]
+set_color mpgrey, [0.73,0.68,0.82]
+set ray_shadows, 0
+set ray_trace_fog, 1
+
+To color using the command line: PYMOL>
+util.cbag	green
+util.cbac	cyan
+util.cbam	light magenta
+util.cbay	yellow
+util.cbas	salmon
+util.cbaw	white/grey
+util.cbab	slate
+util.cbao	bright orange
+util.cbap	purple
+util.cbak	pink
+
+So much more at the PyMOL Wiki! 
+
+pseudoatom cts_center, (sele)
+Amber/
+Click atom by atom manually, then click on select 01
+Ctrl Click once, then again to find distances.
+
+label resi 356-375 and name CB, "%s - %s" % (resn, resi)
+
+set h_bond_cutoff_center, 3.0
+
+Select ligand/molecule of choice, click on action, find: interactions with other atoms
+
+color deepteal, proteinname 
+This adds the colour only to the protein at the end
+
+"C:\Program Files (x86)\The Scripps Research Institute\Vina\vina_split.exe" --input out.pdbqt
+
+.dlg format file seems to be important in autodock
+
+plp
+proteins plus
+
+label sele, "7.1 " u"\u00c5".encode('utf-8')
+set label_size, 8
+
+set ray_opaque_background, 0
+png Br_1_MADA.png, dpi=300
+
+show licorice, resi 443, 316
+show licorice, resi 443+192+375+177+259+316+356+HET
+316
+
+show licorice, resi 443+192+375+177+259+316+380+356+374+356+373+445+412+416+418+194+357+HET
+413 179
+259
+
+No Polar Water
+08 seems promising
+
+
+show licorice, resi 432+181+364+369+305+345+HET
+
+alter (all),resi=str(int(resi)+11)
+
+2 button editing ctrl shift right click to move a residue
+
+for i in *FREEZEM*.com; do g16 ${i} 2 4096 48; done
